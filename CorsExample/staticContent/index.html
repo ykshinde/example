@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>CORS Tomcat Examples</title>
+
+<script type="text/javascript"
+	src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript">
+	$.ajax({
+		url : 'http://127.0.0.1:8080/app/home',
+		type : 'GET',
+		contentType : 'application/text',
+		xhrFields : {
+			withCredentials : true
+		},
+		success : function() {
+			console.log('Cross-Site request sucessful');
+		}
+
+	});
+</Script>
+
+</head>
+<body>
+	<p>
+	<h3>CORS Tomcat Examples</H3>
+	<p>If You are in CROME press CTRL+Shift+i to open developer tools
+		and analyze the request and response headers.</p>
+
+</body>
+</html>
